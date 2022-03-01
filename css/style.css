@@ -3,7 +3,47 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-.web-name{
-	letter-spacing: 0.2rem;
-	padding: 1rem 0;
+/* *****************
+Global styles 
+************* */
+.main-section{
+	max-width: 1200px;
+	width: 85vw; 
+	margin: 0 auto; 
+	padding: 1rem 1rem;
 }
+/* *****************
+Global styles end  
+************* */
+.web-name{
+	text-align: center;
+	padding-bottom: 0.5rem;
+	letter-spacing: 0.2rem;
+}
+/* styles of the search bar */
+.search-bar{
+	margin: 1rem 0;
+	text-align: center;
+}
+.search-input{
+	padding: 0.7rem 1.5rem;
+	width: 60%;
+	display: inline-block;
+	margin: 0 auto;
+}
+.btn{
+	padding: 0.7rem 1.3rem;
+	cursor: pointer;
+}
+/* responsive search bar */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	::placeholder{
+		display: none;
+		color: red;
+	}
+	.search-input{
+		padding-left: 0.2rem;
+	}
+}
+/* end of the search bar styles  */
