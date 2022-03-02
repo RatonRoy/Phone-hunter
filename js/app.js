@@ -82,7 +82,7 @@ const lordPhoneDetailes = (phoneId) => {
 }
 
 const displayPhoneDetailes = (phone) => {
-	console.log(phone);
+	// console.log(phone);
 	const showPhoneContainer = document.getElementById('show-phone-container');
 	const div = document.createElement('div');
 	div.innerHTML = `
