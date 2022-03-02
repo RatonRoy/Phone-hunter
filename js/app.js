@@ -24,6 +24,8 @@ document.getElementById('search-btn').addEventListener('click', function () {
 			mainContainer.insertBefore(sectionTitle, searchResult);
 			phones.forEach(phone => {
 				console.log(phone);
+				const phoneId = phone.slug;
+				console.log(phoneId);
 				const article = document.createElement('article');
 				article.classList.add('phone-card');
 				article.innerHTML = `
@@ -43,7 +45,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
 							<div class="phone-info">
 							<p class="phone-brand"> ${phone.brand}</p>
 							<div class="phone-details">
-								<button>Details</button>
+								<button onClick = "showDetailes()">Details</button>
 								
 							</div>
 							</div>
@@ -59,4 +61,10 @@ document.getElementById('search-btn').addEventListener('click', function () {
 	}
 	searchPhone();
 
-})
+});
+
+const showDetailes = (phoneId) => {
+	// console.log('');
+	const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`
+	console.log(url);
+}
