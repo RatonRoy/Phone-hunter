@@ -8,7 +8,14 @@ document.getElementById('search-btn').addEventListener('click', function () {
 		// console.log(url);
 		fetch(url)
 			.then(res => res.json())
-			.then(data => console.log(data));
+			.then(data => displayPhone(data.data));
+		// display  Phone functions 
+		const displayPhone = (phones) => {
+			console.log(phones);
+			phones.forEach(phone => {
+				const 
+			});
+		}
 	}
 	searchPhone(); 
 	

@@ -1,26 +1,92 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&display=swap");
+/* css variables */
+:root {
+  --primaryColor: #1f22e9;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+}
+/* reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* body */
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--mainBlack);
+  background: var(--offWhite);
+  line-height: 1.4;
+  font-size: 1rem;
 }
 /* *****************
 Global styles 
 ************* */
-.main-section{
+/* .main-section{
 	max-width: 1200px;
 	width: 85vw; 
 	margin: 0 auto; 
 	padding: 1rem 1rem;
+} */
+.section{
+	margin: 3rem 0;
 }
+img{
+	display: block;
+	width: 100%;
+}
+/* section center */
+.section-center {
+	width: 85vw;
+	margin: 3rem auto 2rem auto;
+	max-width: 1170px;
+  }
+/* title */
+.title-wrapper {
+	margin-bottom: 2rem;
+  }
+  .title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	letter-spacing: 0.5rem;
+  }
+  .subtitle {
+	color: var(--primaryColor);
+  }
+  .phone-details button{
+	  background-color: brown;
+	  color: azure;
+	  padding: 0.7rem 1rem;
+	  border: 1px solid brown;
+	  font-size: 1rem;
+	  letter-spacing: 0.15rem;
+	  border-radius: 0.5rem;
+	  cursor: pointer;
+	  font-weight: bold;
+  }
+
 /* *****************
 Global styles end  
 ************* */
 .web-name{
 	text-align: center;
-	padding-bottom: 0.5rem;
-	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	letter-spacing: 0.5rem;
 }
-/* styles of the search bar */
+/* *********** search bar *****************/
 .search-bar{
 	margin: 1rem 0;
 	text-align: center;
@@ -31,10 +97,26 @@ Global styles end
 	display: inline-block;
 	margin: 0 auto;
 }
-.btn{
+::placeholder{
+	letter-spacing: var(--mainSpacing);
+	font: 500;
+}
+ /* search button  */
+.btn-search {
+	background: var(--primaryColor);
+	color: var(--mainWhite);
+	border-color: var(--primaryColor);
 	padding: 0.7rem 1.3rem;
 	cursor: pointer;
-}
+	font-size: 1rem;
+	border: 1px solid var(--primaryColor);
+	border-radius: 0.5rem; 
+	letter-spacing: 0.2rem;
+  }
+  .btn-search:hover {
+	background: transparent;
+	color: var(--primaryColor);
+  }
 /* responsive search bar */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -46,4 +128,87 @@ Global styles end
 		padding-left: 0.2rem;
 	}
 }
-/* end of the search bar styles  */
+/*********** end of the search bar **********************  */
+
+/*************** featured **********************/
+.featured {
+	background: var(--mainWhite);
+  }
+  .phone-card {
+	margin-bottom: 4rem;
+	-webkit-box-shadow: var(--lightShadow);
+	box-shadow: var(--lightShadow);
+	-webkit-transition: var(--mainTransition);
+	transition: var(--mainTransition);
+	cursor: pointer;
+	border-radius: 1rem;
+  }
+  .phone-card:hover {
+	-webkit-box-shadow: var(--darkShadow);
+	box-shadow: var(--darkShadow);
+  }
+  .phone-img-container {
+	position: relative;
+  }
+  .phone-date {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: var(--primaryColor);
+	text-transform: capitalize;
+	padding: 0.25rem 0.5rem;
+	color: var(--mainWhite);
+  }
+  .phone-footer {
+	padding: 1.2rem 1.5rem;
+  }
+  .phone-title {
+	text-transform: capitalize;
+  }
+  .phone-country {
+	color: var(--primaryColor);
+	text-transform: capitalize;
+  }
+  .phone-info {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items: center;
+  }
+  .phone-brand {
+	-ms-flex-item-align: center;
+	align-self: center;
+  }
+  .phone-link {
+	text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+	.featured-center {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-pack: justify;
+	  -ms-flex-pack: justify;
+	  justify-content: space-between;
+	  -ms-flex-wrap: wrap;
+	  flex-wrap: wrap;
+	}
+	.phone-card {
+	  -webkit-box-flex: 0;
+	  -ms-flex: 0 0 calc(50% - 1rem);
+	  flex: 0 0 calc(50% - 1rem);
+	}
+  }
+  @media screen and (min-width: 1170px) {
+	  .phone-card {
+	  -webkit-box-flex: 0;
+	  -ms-flex: 0 0 calc(33.3333% - 1rem);
+	  flex: 0 0 calc(33.3333% - 1rem);
+	}
+  }
+  /*************** end of featured **********************/
