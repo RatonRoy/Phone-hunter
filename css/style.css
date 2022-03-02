@@ -123,6 +123,44 @@ Global styles end
 	}
 }
 /*********** end of the search bar **********************  */
+/*********** Display Phone detailes **********************  */
+.show-phone-detailes{
+	width: 60vw;
+	padding: 2rem 1rem;
+	/* background-color: aquamarine; */
+	margin: 0 auto;
+}
+.show-phone-image img{
+	width: 80%;
+	margin: 0 auto;
+	height: 90vh;
+}
+.show-phone-header{
+	margin: 1rem 0;
+	text-align: center;
+}
+.show-phone-name, .phone-date{
+	padding: 0.5rem 1rem;
+	text-transform: capitalize;
+	letter-spacing: 0.3rem;
+}
+.show-phone-information{
+	width: 70%;
+	margin: 0 auto;
+}
+ul{
+	/* list-style: circle; */
+	font-size: 1rem;
+}
+.list-item{
+	text-transform: capitalize;
+	font-size: 1.5rem;
+}
+.list-wraper-2{
+	margin-left: 2rem;
+}
+/*********** End Of Display Phone detailes **********************  */
+
 
 /*************** featured **********************/
 .featured {
@@ -139,18 +177,6 @@ Global styles end
   .phone-card:hover {
 	-webkit-box-shadow: var(--darkShadow);
 	box-shadow: var(--darkShadow);
-  }
-  .phone-img-container {
-	position: relative;
-  }
-  .phone-date {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: var(--primaryColor);
-	text-transform: capitalize;
-	padding: 0.25rem 0.5rem;
-	color: var(--mainWhite);
   }
   .phone-footer {
 	padding: 1.2rem 1.5rem;
