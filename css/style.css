@@ -33,12 +33,6 @@ body {
 /* *****************
 Global styles 
 ************* */
-/* .main-section{
-	max-width: 1200px;
-	width: 85vw; 
-	margin: 0 auto; 
-	padding: 1rem 1rem;
-} */
 .section{
 	margin: 3rem 0;
 }
@@ -53,7 +47,7 @@ img{
 	max-width: 1170px;
   }
 /* title */
-.title-wrapper {
+.phone-section-title {
 	margin-bottom: 2rem;
   }
   .title {
@@ -136,7 +130,6 @@ Global styles end
   }
   .phone-card {
 	margin-bottom: 4rem;
-	-webkit-box-shadow: var(--lightShadow);
 	box-shadow: var(--lightShadow);
 	-webkit-transition: var(--mainTransition);
 	transition: var(--mainTransition);
@@ -162,19 +155,17 @@ Global styles end
   .phone-footer {
 	padding: 1.2rem 1.5rem;
   }
-  .phone-title {
+  .phone-name {
 	text-transform: capitalize;
   }
-  .phone-country {
+  .phone-brand {
 	color: var(--primaryColor);
 	text-transform: capitalize;
   }
   .phone-info {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
+	/* -webkit-box-pack: justify;
+	-ms-flex-pack: justify; */
 	justify-content: space-between;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -184,9 +175,7 @@ Global styles end
 	-ms-flex-item-align: center;
 	align-self: center;
   }
-  .phone-link {
-	text-align: center;
-  }
+  
   @media screen and (min-width: 768px) {
 	.featured-center {
 	  display: -webkit-box;

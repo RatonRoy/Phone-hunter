@@ -11,12 +11,52 @@ document.getElementById('search-btn').addEventListener('click', function () {
 			.then(data => displayPhone(data.data));
 		// display  Phone functions 
 		const displayPhone = (phones) => {
-			console.log(phones);
+			// main container 
+			const mainContainer = document.getElementById('main-phone-section');
+			// section title 
+			const sectionTitle = document.createElement('div');
+			sectionTitle.classList.add('phone-section-title');
+			sectionTitle.innerHTML = `
+				<h2 class="title">featured <span class="subtitle">phones</span></h2>
+			`
+			// search result 
+			const searchResult = document.getElementById('phone-container');
+			mainContainer.insertBefore(sectionTitle, searchResult);
 			phones.forEach(phone => {
-				const 
+				console.log(phone);
+				const article = document.createElement('article');
+				article.classList.add('phone-card');
+				article.innerHTML = `
+					<!-- single Phone -->
+						<div class="phone-img-container">
+							<img
+							src="${phone.image}"
+							class="phone-img"
+							alt="awesome phone"
+							/>
+							<p class="phone-date">august 14th, 2019</p>
+						</div>
+						<!-- tour footer -->
+						<div class="phone-footer">
+							<h4 class="phone-name">${phone.phone_name}</h4>
+							<!-- tour info -->
+							<div class="phone-info">
+							<p class="phone-brand"> ${phone.brand}</p>
+							<div class="phone-details">
+								<button>Details</button>
+								
+							</div>
+							</div>
+						</div>
+					
+					<!-- end of single Phone -->
+				 
+				`
+				searchResult.appendChild(article);
+
 			});
 		}
 	}
-	searchPhone(); 
-	
+	searchPhone();
+
 })
