@@ -163,6 +163,13 @@ ul{
 
 
 /*************** featured **********************/
+.no-phone-match{
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	display: none; 
+	color: brown;
+}
 .featured {
 	background: var(--mainWhite);
   }

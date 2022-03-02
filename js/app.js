@@ -4,16 +4,32 @@ document.getElementById('search-btn').addEventListener('click', function () {
 		const searchValue = searchField.value;
 		// clear data 
 		searchField.value = '';
+		if (searchValue === '') {
+			const whiteSpace = document.getElementById('white-space');
+			whiteSpace.style.display = 'block';
+		}
+		else {
+			const whiteSpace = document.getElementById('white-space');
+			whiteSpace.style.display = 'none';
+			// load data 
+			const url = `https://openapi.programming-hero.com/api/phones?search=${searchValue}`;
+			fetch(url)
+				.then(res => res.json())
+				.then(data => displayPhone(data.data));
+		}
 		
-		// load data 
-		const url = `https://openapi.programming-hero.com/api/phones?search=${searchValue}`;
-		fetch(url)
-			.then(res => res.json())
-			.then(data => displayPhone(data.data));
 		// display  Phone functions 
 		const displayPhone = (phones) => {
 			const searchResult = document.getElementById('phone-container');
 			searchResult.textContent = '';
+			if (phones.length === 0) {
+				const errorMessege = document.getElementById('no-match-result');
+				errorMessege.style.display = 'block';
+			}
+			else if (phones.length !== 0) {
+				const errorMessege = document.getElementById('no-match-result');
+				errorMessege.style.display = 'none';
+			}
 			phones.forEach(phone => {
 				const article = document.createElement('article');
 				article.classList.add('phone-card');
