@@ -1,4 +1,8 @@
+const spinnerToggle = styleDis => {
+	const spinner = document.getElementById('spinner').style.display = styleDis;
+}
 document.getElementById('search-btn').addEventListener('click', function () {
+	spinnerToggle("block");
 	const searchPhone = () => {
 		const searchField = document.getElementById('search-field');
 		const searchValue = searchField.value;
@@ -60,6 +64,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
 				 
 				`
 				searchResult.appendChild(article);
+				spinnerToggle("none");
 
 			});
 		}

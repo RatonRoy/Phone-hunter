@@ -111,6 +111,12 @@ Global styles end
 	background: transparent;
 	color: var(--primaryColor);
   }
+  .spinner{
+	  font-size: 2rem;
+	  letter-spacing: 0.7rem;
+	  padding: 0 2rem;
+	  display: none;
+  }
 /* responsive search bar */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
